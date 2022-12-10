@@ -1,17 +1,70 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/todo/todo",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"enablePullDownRefresh": false
 			}
+
+		}, {
+			"path": "pages/about/about",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/diary/diary",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTitleText": "待办事项",
+		"navigationBarBackgroundColor": "#93ccf9",
+		"backgroundColor": "#fff"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#ccc",
+		"selectedColor": "#000",
+		"list": [{
+				"pagePath": "pages/todo/todo",
+				"text": "待办",
+				"iconPath": "static/tab_icons/todo_list.png",
+				"selectedIconPath": "static/tab_icons/todo_list (1).png"
+			},
+			{
+				"pagePath": "pages/diary/diary",
+				"text": "日记",
+				"iconPath": "static/tab_icons/日记.png",
+				"selectedIconPath": "static/tab_icons/日记 (1).png"
+			},
+			{
+				"pagePath": "pages/about/about",
+				"text": "关于",
+				"iconPath": "static/tab_icons/我的.png",
+				"selectedIconPath": "static/tab_icons/我的 (1).png"
+			}
+		]
+	},
+	"subPackages": [{
+		"root": "subpkg",
+		"pages": [{
+			"path": "calendar/calendar",
+			"style": {
+				"navigationBarTitleText": "日历",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "todo_detail/todo_detail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+
+		}]
+	}]
 }
